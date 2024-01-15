@@ -1,15 +1,15 @@
 # Importing food (no food class yet) example: import Snack
-
+from Snack import Snack
 # Importing libs
 import time
 
 # not_over state is used to check if the user already ate the food successfully or not and manages how the main loop works
 not_over = True
 
-# Creating food variables (currently, there is no food class) example: snack = new Snack
-
+# Creating food variables (currently, there is no food class) example: snack = Snack(). Also, please make the classes with the first letter highCap and the variables all lowcap
+snack = Snack()
 # List containing all food exported (please add the food variable here)
-food = []
+food = [snack]
 
 # List to add all names
 food_names = []
@@ -52,7 +52,7 @@ while not_over:
             for food_item in food:
                 if user_request == food_item.name:
                     food_item.eat()
-            print("Enjoyed the meal? ")
+            print("Enjoyed the meal? What about eating something else! Run the code again and check for more food. ")
             not_over = False
             break  # After the user eats, he is requested to run the code again to experience something else. This breaks the loop and stops the code.
         else:
